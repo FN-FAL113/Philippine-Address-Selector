@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <script src="./handler.js" defer></script>
+
+    <style>
+        .container {
+            width: 67.5%;
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+    </style>
+
+    <title>PH Address Selector</title>
+</head>
+<body>
+    
+    <div class="container">
+        <label for="region" class="form-label" style="font-size: 16px;">Region</label>
+        <select class="form-select p-2" id="region" aria-label="region selection">
+            <option selected value="">Please Select a Region First</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <label for="province" class="form-label" style="font-size: 16px;">Province</label>
+        <select name="province" class="form-select p-2" id="province" aria-label="province selection"></select>
+    </div>
+
+    <div class="container">
+        <label for="city" class="form-label" style="font-size: 16px;">City / Municipality</label>
+        <select name="city" class="form-select p-2" id="city" aria-label="city selection"></select>
+    </div>
+
+    <div class="container">
+        <label for="barangay" class="form-label" style="font-size: 16px;">Barangay</label>
+        <select name="barangay" class="form-select p-2" id="barangay" aria-label="barangay selection"></select>
+    </div>
+
+</body>
+</html>
