@@ -11,7 +11,7 @@ function removeAllChildNodes(el) {
 }
 
 async function loadRegions() {
-    const res = await fetch('/public/region.json')
+    const res = await fetch('public/region.json')
     const jsonArr = await res.json()
 
     const regionOptions = jsonArr.map((obj) => `<option value="${obj.region_code}">${obj.region_name}</option>`)
@@ -28,7 +28,7 @@ regionSelectEl.onchange = async (e) => {
     if(!selected.value) return
 
     try {
-        const res = await fetch('/public/province.json')
+        const res = await fetch('public/province.json')
         const jsonArr = await res.json()
 
         const provinces = jsonArr.filter((obj) => obj.region_code === selected.value)
@@ -54,7 +54,7 @@ async function handleProvinceSelections() {
     const selected = provinceSelectEl.options[provinceSelectEl.options.selectedIndex]
 
     try {
-        const res = await fetch('/public/city.json')
+        const res = await fetch('public/city.json')
         const jsonArr = await res.json()
 
         const cities = jsonArr.filter((obj) => obj.province_code === selected.dataset.provinceCode)
@@ -77,7 +77,7 @@ async function handleCitySelections() {
     const selected = citySelectEl.options[citySelectEl.options.selectedIndex]
 
     try {
-        const res = await fetch('/public/barangay.json')
+        const res = await fetch('public/barangay.json')
         const jsonArr = await res.json()
 
         const barangays = jsonArr.filter((obj) => obj.city_code === selected.dataset.cityCode)
